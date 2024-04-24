@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Home Page</title>
+    <!-- Include Bootstrap 4 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <!-- Include FontAwesome CSS for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <style>
+      /* Custom hover transformation for images */
+      .image-hover {
+        transition: transform 0.3s;
+        border-radius: 10px;
+      }
+      .image-hover:hover {
+        transform: scale(1.1);
+      }
+
+      /* Custom footer style */
+      .footer {
+        background-color: #f4c531;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .footer a {
+        color: white;
+        margin: 0 10px;
+      }
+
+      .footer a:hover {
+        text-decoration: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .nav-link {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+      }
+
+      .link a {
+        position: relative;
+        padding-bottom: 5px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #f4c531;
+      }
+
+      .link a::after {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #f4c531;
+        transition: 0.5s;
+      }
+
+      .link a:hover::after {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content" style="background-color: #ffbb00">
+      <!-- Responsive Navigation Bar -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><h3>Hey, {{user.email}}</h3></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto nav__links">
+            <li class="nav-item link">
+              <a class="nav-link" href="#footer">ABOUT</a>
+            </li>
+            <li class="nav-item link">
+              <a class="nav-link" href="/logout">LOGOUT</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Content Section -->
+      <div
+        class="container mt-4"
+        style="background-color: #375e97; color: white"
+      >
+        <section class="about">
+          <div class="section__container about__container">
+            <div
+              class="mycontent"
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+              "
+            >
+              <a
+                href="../static/landpage1.html" target="_blank"
+                style="text-decoration: none; color: white"
+              >
+                <div
+                  class="page1"
+                  style="
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                  "
+                >
+                  <div class="about__image about__image-1" id="about">
+                    <img src="../static/assets/about-1.png" width="800px" height="500px" alt="about" />
+                  </div>
+                  <div
+                    class="about__content about__content-1"
+                    style="padding: 10px"
+                  >
+                    <h3 class="section__subheader">LANDING PAGE 1</h3>
+                    <h2 class="section__header">
+                      Blog Landing Page
+                    </h2>
+                    <p>
+                    
+                
+                        It provides a brief overview of your blog, its mission, and the topics it covers.  <br>
+                    
+                      It encourage visitors to share your blog posts on social media by including share buttons on individual posts. <br>
+                      It includes social media buttons or widgets that allow visitors to follow your blog on platforms like Twitter, Facebook, Instagram, etc. <br>
+                      If your blog includes videos or multimedia content, feature them prominently on the landing page. <br>
+                    
+                    
+                    
+                  </div>
+                </div>
+              </a>
+              <br>
+              <br>
+              <a
+                href="../static/landpage2.html" target="_blank"
+                style="text-decoration: none; color: white"
+              >
+                <div
+                  class="page2"
+                  style="
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                  "
+                >
+                  <div
+                    class="about__content about__content-2"
+                    style="padding: 10px"
+                  >
+                    <h3 class="section__subheader">LANDING PAGE 2</h3>
+                    <h2 class="section__header">
+                      Business Landing Page
+                    </h2>
+                    <p>
+                     
+                      It provides a brief overview of your company, its mission, and what sets it apart from competitors.  <br>
+                      It displays testimonials or reviews from satisfied customers.  <br>
+                      It provides a list of features or benefits of your products/services. <br>
+                      You can also use bullet points or short descriptions to quickly convey the advantages of choosing your business.  <br>
+                      It highlights any awards, certifications, or accolades that demonstrate your company's credibility and expertise.
+          
+                    </p>
+                  </div>
+                  <div class="about__image about__image-2" id="equipment">
+                    <img src="../static/assets/about-2.png" width="800px" height="500px" alt="about" />
+                  </div>
+                </div>
+              </a>
+              <br>
+              <br>
+              <a href="../static/landpage3.html" target="_blank" style="text-decoration: none; color: white">
+                <div
+                  class="page3"
+                  style="
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                  "
+                >
+                  <div class="about__image about__image-3" id="blog">
+                    <img src="../static/assets/about-3.png" width="800px" height="500px" alt="about" />
+                  </div>
+                  <div
+                    class="about__content about__content-3"
+                    style="padding: 10px"
+                  >
+                    <h3 class="section__subheader">LANDING PAGE 3</h3>
+                    <h2 class="section__header">
+                      Portfolio landing page
+                    </h2>
+                    <p>
+                      It provides a brief introduction to yourself, your skills, and your areas of expertise. <br>
+                      It includes images, descriptions, and links to each project to give visitors a glimpse of your work. <br>
+                      You can list your skills, tools, and technologies that you specialize in. <br>
+                    </p>
+                    <div class="about__btn">
+                     
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <!-- Footer Section -->
+    <footer class="footer" id="footer">
+      <p>
+        Follow us:
+        <a href="https://github.com/lokeshwarir2" target="_blank" class="fab fa-github"></a>
+       </p>
+    </footer>
+    <script src="Home.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="../static/utilities/main.js"></script>
+    <!-- Include Bootstrap 4 JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

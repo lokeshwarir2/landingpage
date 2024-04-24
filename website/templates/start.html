@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <!-- Include FontAwesome CSS for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../static/utilities/start/style.css" />
+    <script src="https://unpkg.com/scrollreveal"></script>
+  </head>
+  <body>
+    <div class="main">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <h3 id="welcome">Welcome!</h3>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto nav__links">
+            <li class="nav-item link">
+              <a class="nav-link" href="#demo">FREE DEMO</a>
+            </li>
+
+            <li class="nav-item link">
+              <a class="nav-link" href="#aboutttt">ABOUT</a>
+            </li>
+
+            <li class="nav-item link">
+              <a class="nav-link" href="/login">LOGIN</a>
+            </li>
+            <li class="nav-item link">
+              <a class="nav-link" href="/sign-up">SIGN-UP</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="container">
+        <div class="userInfromation">
+          <section id="userNumber" class="display-1 trans">{{user}}</section>
+          <section id="message" class="trans">
+            Users have already registered!
+          </section>
+        </div>
+
+        <div class="demo" id="demo">
+          <a
+            href="/sign-up"
+            style="text-decoration: none; color: black"
+            id="demo-page"
+          >
+            <div class="about__image about__image-1" id="about">
+              <img
+                src="../static/assets/about-1.png"
+                alt="about"
+                height="100% "
+                width="1000px"
+              />
+            </div>
+            <div
+              class="about__content about__content-1"
+              id="demo-para"
+              style="margin-left: 20px"
+            >
+              <h3 class="section__subheader">LANDING PAGE </h3>
+              <h2 class="section__header"> Blog Landing Page</h2>
+              <p>
+               
+                It provides a brief overview of your blog, its mission, and the topics it covers.  <br>
+                    
+                It encourage visitors to share your blog posts on social media by including share buttons on individual posts. <br>
+                It includes social media buttons or widgets that allow visitors to follow your blog on platforms like Twitter, Facebook, Instagram, etc. <br>
+                If your blog includes videos or multimedia content, feature them prominently on the landing page. <br>
+              
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer text-center" style="margin-top: 50px" id="aboutttt">
+      <div class="container">
+        <div class="aboutus">
+          We sell Landing pages!!! <br />
+          For more information, you can contact us using the given mail.
+        </div>
+        <!-- Additional content in a div (could be a message or any other element) -->
+        
+
+        <!-- Social media icons -->
+        <div class="social-icons" >
+          <a href="mailto:example@example.com" aria-label="Email"
+            ><i class="fas fa-envelope"></i
+          ></a>
+          
+         
+        
+          <a
+            href="https://www.linkedin.com/in/yourlinkedin"
+            target="_blank"
+            aria-label="LinkedIn"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+    <script src="../static/utilities/start/script.js"></script>
+    <!--  For trasition  -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

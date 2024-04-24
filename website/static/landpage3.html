@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap-grid.min.css" integrity="sha512-i1b/nzkVo97VN5WbEtaPebBG8REvjWeqNclJ6AItj7msdVcaveKrlIIByDpvjk5nwHjXkIqGZscVxOrTb9tsMA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="utilities/landing3/styles.css" />
+    <title>Landing page 3</title>
+    <style>
+      .button-container {
+        position: fixed;
+        bottom: 20px; /* Adjust as needed */
+        left: 50%;
+        transform: translateX(-50%);
+      }
+  
+      .btn-success {
+        padding: 10px 30px;
+        font-size: 18px;
+        border-radius: 25px;
+        transition: all 0.3s ease-in-out;
+        background-color: #ffc107; /* Yellow background color */
+        border-color: #ffc107; /* Yellow border color */
+        color: #000; /* Black text color */
+      }
+  
+      .btn-success:hover {
+        background-color: #ffcd38; /* Lighter shade of yellow */
+        border-color: #ffcd38; /* Lighter shade of yellow */
+        color: #000; /* Black text color */
+      }
+  
+      /* Centering the button */
+      .d-flex.justify-content-center {
+        display: flex;
+        justify-content: center;
+      }
+</style>  
+  </head>
+  <body>
+    <div class="parallax__container">
+      <img src="assets/landing3/bg-1.jpg" alt="parallax" />
+      <img id="bg-2" src="assets/landing3/bg-2.png" alt="parallax" />
+      <h1 id="title">Topic</h1>
+      <img id="bg-3" src="assets/landing3/bg-3.png" alt="parallax" />
+    </div>
+    <section class="about">
+      <div class="image__gallary">
+        <div class="image__card" id="image__card-1">
+          <img src="assets/landing3/grid-1.jpg" alt="grid" />
+        </div>
+        <div class="image__card" id="image__card-2">
+          <img src="assets/landing3/grid-2.jpg" alt="grid" />
+        </div>
+        <div class="image__card" id="image__card-3">
+          <img src="assets/landing3/grid-3.jpg" alt="grid" />
+        </div>
+        <div class="image__card" id="image__card-4">
+          <img src="assets/landing3/grid-4.jpg" alt="grid" />
+        </div>
+      </div>
+      <div class="details">
+        Your content!!
+      </div>
+      <div class="footer__btn">
+        <button class="learn__more">Learn More</button>
+      </div>
+    </section>
+
+    <div class="b">
+      <div class="button-container">
+        <div class="d-flex justify-content-center">
+          <a href="https://github.com/lokeshwarir2/Portfolio-Landing-page.git" class="btn btn-success">Download the source code now</a>
+        </div>
+      </div>
+    </div>
+    <script>
+      var title = document.getElementById("title");
+      var bg_2 = document.getElementById("bg-2");
+      var bg_3 = document.getElementById("bg-3");
+
+      var image_card_1 = document.getElementById("image__card-1");
+      var image_card_2 = document.getElementById("image__card-2");
+      var image_card_3 = document.getElementById("image__card-3");
+      var image_card_4 = document.getElementById("image__card-4");
+
+      document.addEventListener("scroll", (event) => {
+        var positionY = window.scrollY;
+
+        title.style.fontSize = `${100 + positionY * 0.5}px`;
+
+        bg_2.style.top = `-${positionY * 0.5}px`;
+        bg_3.style.top = `-${positionY}px`;
+        bg_3.style.scale = 1 + positionY * 0.001;
+
+        image_card_1.style.transform = `translateY(${
+          positionY * -0.5 + 400
+        }px)`;
+
+        image_card_2.style.transform = `translateY(${positionY * 0.1 + -50}px)`;
+
+        image_card_3.style.transform = `translateY(${
+          positionY * -0.1 + 100
+        }px)`;
+
+        image_card_4.style.transform = `translateY(${
+          positionY * 0.2 + -125
+        }px)`;
+
+        var _newOpacity = positionY * 0.001;
+        if (_newOpacity >= 0 && _newOpacity <= 1) {
+          image_card_1.style.opacity = _newOpacity;
+          image_card_2.style.opacity = _newOpacity;
+          image_card_3.style.opacity = _newOpacity;
+          image_card_4.style.opacity = _newOpacity;
+        }
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js" integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </body>
+</html>

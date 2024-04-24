@@ -1,0 +1,241 @@
+/*  start   */
+* {
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+#welcome {
+  margin-left: 30px;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(10deg, #375e97, #b4b92b, #ffcc3f);
+  /* The 135 degrees angle gives a diagonal effect, change as desired */
+  background-attachment: fixed; /* Keeps the background stationary while scrolling */
+}
+.nav-link {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.link a {
+  position: relative;
+  padding-bottom: 5px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #f4c531;
+}
+
+.link a::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #f4c531;
+  transition: 0.5s;
+}
+
+.link a:hover::after {
+  width: 100%;
+}
+#navbarNav {
+  display: flex;
+}
+
+#navbarNav ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#navbarNav ul li {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.userInfromation {
+  /* border: 2px solid black; */
+  height: 450px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#userNumber {
+  /* border: 1px solid #000; */
+  height: 400px;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.userInfromation {
+  margin-bottom: 50px;
+}
+#message {
+  /* border: 1px solid #000; */
+  height: 400px;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  font-weight: 100;
+  background: none;
+  border: none;
+}
+
+#userNumber {
+  background-color: #f0f0f0;
+  border: 2px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  font-size: 200px;
+  background: none;
+  border: none;
+}
+
+/* Animation for a smooth transition */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    /* background-color: #f4c531; */
+  }
+}
+
+.animated {
+  animation: fade-in forwards 3s;
+  /* background-color: #e7b717b5; */
+}
+.trans {
+  opacity: 0;
+  transform: translateY(100px); /* Initially move content downward */
+  transition: all 0.6s ease-in-out; /* Smooth transition */
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #efefea;
+  text-align: center;
+}
+
+/* Style for when content is revealed */
+.reveal {
+  opacity: 1;
+  transform: translateY(0); /* Move content to its original position */
+}
+/* /* .demo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid hotpink;
+} */
+
+#about {
+  /* border: 2px solid blue; */
+  height: 400px;
+  width: 2800px;
+}
+
+#demo-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px saddlebrown; */
+}
+#demo-para {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+
+/*-----------------------------------------------------------------*/
+.about {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    var(--primary-color) 8rem
+  );
+  overflow: hidden;
+}
+
+.about__container {
+  padding-top: 0;
+  display: grid;
+  gap: 5rem 2rem;
+  overflow: hidden;
+}
+
+.about__image img {
+  max-width: 660px;
+  margin-inline: auto;
+  border-radius: 5px;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.4);
+}
+
+.about__content-1 .section__subheader::after {
+  content: "01";
+}
+
+.about__content-2 .section__subheader::after {
+  content: "02";
+}
+
+.about__content-3 .section__subheader::after {
+  content: "03";
+}
+
+.about__content p {
+  margin-bottom: 1.5rem;
+  color: var(--text-light);
+}
+
+.about__content a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--secondary-color);
+}
+
+.about__content a span {
+  transition: 0.3s;
+}
+
+.about__content a:hover span {
+  transform: translateX(10px);
+}
+
+/*------------------------------------------------------------------*/
+.footer {
+  background-color: #333; /* Dark background */
+  color: #fff; /* White text */
+  padding: 20px;
+}
+
+.footer .social-icons a {
+  color: #fff; /* White icons */
+  margin: 0 10px;
+  font-size: 1.5em;
+  transition: color 0.3s;
+}
+
+.footer .social-icons a:hover {
+  color: #007bff; /* Change color on hover (Bootstrap blue) */
+}
+
+.footer .content {
+  margin-bottom: 10px; /* Space for the social icons */
+}
