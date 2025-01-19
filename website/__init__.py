@@ -1,5 +1,5 @@
 import os
-os.environ['DATABASE_URL'] = "postgresql://root:DlYe4QjalVn7AlS768RDSYLy8wA4Aehb@dpg-cok26rm3e1ms73blvc30-a.oregon-postgres.render.com/landingpage_evvt"
+os.environ['DATABASE_URL'] = "postgresql://prettyprintedrenderexample_user:4iJJsPG9HkPq7kRrwYoabowKlw6rbM8f@dpg-cu6avo56l47c73bvktog-a.oregon-postgres.render.com/prettyprintedrenderexample"
 
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
